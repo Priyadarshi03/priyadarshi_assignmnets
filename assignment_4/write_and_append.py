@@ -9,6 +9,24 @@ Problem Statement: Write a Python program that:
 
 def write_and_append():
 
-    input_text = input("Enter the text to write in the ouput file: ")
+    initial_text = input("Enter the text to write in the ouput file: ")
 
-    with open("output.txt",'w') as :
+    with open("output.txt",'w') as file:
+
+        file.write(initial_text + "\n")
+    print("Data successfully written to output.txt")
+
+    append_text = input("Enter additional text to append: ")
+
+    with open("output.txt", 'a') as file:
+
+        file.write(append_text + "\n")
+
+    print("Data succesfully appended")
+
+    print("\nFinal content of output.txt:")
+    with open("output.txt", 'r') as file:
+        print(file.read())
+
+write_and_append()
+    
