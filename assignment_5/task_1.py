@@ -7,9 +7,13 @@ Problem Statement: Write a Python program that:
 4.   If the student’s name is not found, display an appropriate message.
 '''
 
-student_data = {'maya':20, 'aman':30, 'karan':40, 'rahul':20}
+student_data = {'Maya':20, 'Aman':30, 'Karan':40, 'Rahul':20}
 
-student_name = input("Enter the student name: ")
+student_name = input("Enter the student's name: ")
 
-student_marks = 
+if student_name in student_data:
+    students_marks = student_data[student_name]
+    print(f"{student_name.capitalize()}'s marks: {students_marks}")
+else:
+    print(f"Student {student_name.capitalize()} not found.")
 
